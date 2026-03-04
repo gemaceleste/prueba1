@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Curso Interactivo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <i data-lucide="book-open" class="icon-primary"></i>
+                <h1>Curso Pro</h1>
+            </div>
+            <nav class="module-list" id="module-list">
+                <!-- Módulos cargados por JS -->
+            </nav>
+            <div class="sidebar-footer">
+                <div class="progress-info">
+                    <span>Progreso</span>
+                    <span id="progress-text">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="mobile-header">
+                <div class="logo">
+                    <i data-lucide="book-open"></i>
+                    <span>Curso Pro</span>
+                </div>
+                <button id="menu-toggle" class="btn-icon">
+                    <i data-lucide="menu"></i>
+                </button>
+            </header>
+
+            <div class="content-wrapper" id="content-area">
+                <div class="module-header">
+                    <span class="badge" id="module-duration"></span>
+                    <h2 id="module-title">Selecciona un módulo</h2>
+                    <p id="module-description" class="text-muted"></p>
+                </div>
+
+                <div class="video-container">
+                    <iframe id="video-player" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <div class="divider">
+                    <span><i data-lucide="file-text"></i> Material de Lectura</span>
+                </div>
+
+                <div class="pdf-card">
+                    <div class="pdf-header">
+                        <div>
+                            <h3>Documento del módulo</h3>
+                            <p class="text-muted">Lee el contenido o descárgalo aquí.</p>
+                        </div>
+                        <a id="pdf-download" href="#" download class="btn-primary">
+                            <i data-lucide="download"></i> Descargar PDF
+                        </a>
+                    </div>
+                    <div class="pdf-viewer">
+                        <object id="pdf-object" data="" type="application/pdf">
+                            <p>Tu navegador no soporta PDFs. <a id="pdf-fallback" href="#">Descárgalo aquí</a>.</p>
+                        </object>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
